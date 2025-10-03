@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header class="navbar">
+    <div class="logo">Kenneth</div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#resume">Resume</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <section class="hero" id="home">
+    <div class="hero-container">
+      <div class="hero-img">
+        <img src="image/tolores.jpg" alt="Kenneth">
+
+
+      </div>
+      <div class="hero-text">
+        <h1>Hi, I'm <span>Kenneth</span></h1>
+        <h2>I'm a <span id="typing"></span></h2>
+
+        <p>
+          I am BSIT Student Explore my work to see how I combine creativity with technical expertise to meet diverse client and user needs. Feel free to get in touch if you're interested in collaborating or learning more about my journey in web development.
+      
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+        <div class="social-links">
+          <a href="https://web.facebook.com/kenneth.tolores.414827" target="_blank"><i class="fab fa-facebook"></i></a>
+          <a href="https://linkedin.com/in/yourprofile" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a href="https://www.instagram.com/toloresk?igsh=Zndta3p2emdncnZv" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://github.com/kenneth0565" target="_blank"><i class="fab fa-github"></i></a>
+        </div>
+
+      </div>
+      <a href="#contact" class="btn">Contact Me</a>
+    </div>
+    </div>
+  </section>
+
+
+
+  <section class="skills" id="skills">
+    <h2>My Skills</h2>
+
+    <div class="skills-container">
+      <div class="skill"><i class="fab fa-html5"></i> HTML</div>
+      <div class="skill"><i class="fab fa-css3-alt"></i> CSS</div>
+      <div class="skill"><i class="fab fa-java"></i> Java</div>
+
+    </div>
+  </section>
+
+
+  <section class="resume" id="resume">
+    <h2>Resume</h2>
+
+    <div class="resume-container">
+
+
+      <div class="resume-section">
+        <h3>Education</h3>
+        <ul>
+          <li><strong>Bachelor of Science in Information Technology</strong> – OMSC Mamburao Campus</li>
+        </ul>
+      </div>
+
+     
+
+
+      <div class="resume-section">
+        <h3>Experience</h3>
+        <ul>
+          <li>Created multiple small projects using HTML, CSS, and JavaScript.</li>
+          <li>Worked on group coding activities in school.</li>
+         
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="projects" id="projects">
+    <h2>Projects</h2>
+
+    <div class="projects-container">
+    
+      <div class="project">
+        <img src="image/KENTOTTT.png" alt="Project 1">
+        <h3>A simple games application</h3>
+        <p>A responsive  website using figma</p>
+      </div>
+
+      <div class="project">
+        <img src="image/Screenshot 2024-12-12 155706.png" alt="Project 2">
+        <h3>Website Project</h3>
+        <p>A simple Web app to a Agriculture fields using HTML,CSS,JAVASCRIPT</p>
+      </div>
+
+      
+    </div>
+  </section>
+
+
+  
+  <section class="contact" id="contact">
+    <h2>Contact Me</h2>
+    <p>If you’d like to work together or have any questions, feel free to reach out!</p>
+
+    <div class="contact-container">
+      <!-- Contact Informationss -->
+      <div class="contact-info">
+        <p><i class="fas fa-envelope"></i> toloreskenneth18@gmail.com</p>
+        <p><i class="fas fa-phone"></i> +63 927 914 3125</p>
+        <p><i class="fas fa-map-marker-alt"></i> Mamburao, Philippines</p>
+      </div>
+
+      <!--message to me -->
+      <form class="contact-form">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Your Message" rows="5" required></textarea>
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+
+<script>
+  const words = ["Musician", "Web Developer", "Coder"]; 
+  let i = 0;
+  let j = 0;
+  let currentWord = "";
+  let isDeleting = false;
+
+  function type() {
+    currentWord = words[i];
+    if (isDeleting) {
+      document.getElementById("typing").textContent = currentWord.substring(0, j--);
+      if (j < 0) {
+        isDeleting = false;
+        i = (i + 1) % words.length; 
+      }
+    } else {
+      document.getElementById("typing").textContent = currentWord.substring(0, j++);
+      if (j > currentWord.length) {
+        isDeleting = true;
+        setTimeout(type, 1200); 
+        return;
+      }
+    }
+    setTimeout(type, isDeleting ? 100 : 150);
+  }
+
+  type();
+</script>
+
+<script src="main.js"></script>
+
+
+</body>
+
+</html>
